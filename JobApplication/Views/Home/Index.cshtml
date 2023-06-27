@@ -1,0 +1,401 @@
+﻿@model global::JobApplication.Models.JobApplication
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+@inject Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Builder.RequestLocalizationOptions> locOptions
+
+@{
+    ViewData["Title"] = "Index";
+    var culture = Context.Features.Get<Microsoft.AspNetCore.Localization.IRequestCultureFeature>();
+    var cultureList = locOptions.Value.SupportedUICultures.Select(x => new SelectListItem { Value = x.Name, Text = localizer.GetString(x.Name) }).ToList();
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <img src="~/images/an-introduction-to-low-level-programming.jpg" class="img-fluid pozadina" alt="Pozadina">
+        </div>
+
+         <div class="container mt-2">
+            <div class="row justify-content-center">
+            <div class="col-2">
+                <form asp-action="CultureManagement" asp-controller="Home" method="post">
+                    <select class="form-select bg-transparent text-primary" name="culture" asp-for="@culture.RequestCulture.UICulture.Name" asp-items="cultureList" onchange="this.form.submit();">
+                    </select>
+                </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="jumbotron text-center py-5 container">
+                <h1 class="display-4">.NET Developer</h1>
+                <p class="lead">@localizer["AboutCompany"]</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-group">
+    <div class="card">
+        <div class="card-header bg-transparent border-success text-primary">@localizer["JobDescription"]</div>
+        <div class="card-body">
+            <h5 class="card-title"><b>@localizer["YourFieldOfWork"]</b></h5>
+            <p class="card-text text-info">
+              @localizer["YourFieldOfWorkText"]
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-transparent border-success text-primary">@localizer["Qualifications"]</div>
+        <div class="card-body">
+            <h5 class="card-title"><b> @localizer["WhatDoYouBring"] </b></h5>
+            <p class="card-text text-info">
+                @localizer["QualificationsText"]
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-transparent border-success text-primary">@localizer["AdditionalInformation"]</div>
+        <div class="card-body">
+            <h5 class="card-title"><b>@localizer["WeOffer"]</b></h5>
+            <p class="card-text text-info">
+               @localizer["AdditionalInformationText"]
+            </p>
+        </div>
+    </div>
+</div>
+    
+<h2 class="text-center text-primary my-4">@localizer["Apply"]</h2>
+<div class="mt-5">
+    <form method="post" enctype="multipart/form-data">
+        <div class="row mx-5 forma">
+            <legend class="text-primary">@localizer["PersonalDetails"]</legend>
+            <div class="col-lg-6 mt-2">
+                <label class="form-label mt-4">@localizer["FirstName"]</label><span style="color:red">*</span>
+                 <input asp-for="FirstName" class="form-control" placeholder=@localizer["FirstName"]>
+                  <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 mt-2">
+                    <label class="form-label mt-4">@localizer["LastName"]</label><span style="color:red">*</span>
+                <input asp-for="LastName" class="form-control" placeholder=@localizer["LastName"]>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 mt-2">
+                   <label class="form-label mt-4">@localizer["Email"]</label><span style="color:red">*</span>
+                <input asp-for="Email" class="form-control" placeholder=@localizer["Email"]>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 mt-2">
+                <label class="form-label mt-4">@localizer["ConfirmEmail"]</label><span style="color:red">*</span>
+                <input asp-for="ConfirmEmail" class="form-control" placeholder=@localizer["ConfirmEmail"]>
+                <span asp-validation-for="ConfirmEmail" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 my-2">
+                <label class="form-label mt-4">@localizer["DateOfBirth"]</label><span style="color:red">*</span>
+                <input asp-for="DateOfBirth" class="form-control" placeholder=@localizer["DateOfBirth"]>
+                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mx-5 mt-4 forma">
+            <legend class="text-primary">@localizer["ContactDetails"]</legend>
+            <div class="col-lg-6 mt-2">
+                <label class="form-label mt-4">@localizer["Address"]</label><span style="color:red">*</span>
+                <input asp-for="Address" class="form-control" placeholder=@localizer["Address"]>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 mt-2">
+                <label class="form-label mt-4">@localizer["City"]</label><span style="color:red">*</span>
+                <input asp-for="City" class="form-control" placeholder=@localizer["City"]>
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 mt-2">
+                <label class="form-label mt-4">@localizer["Country"]</label><span style="color:red">*</span>
+                <select asp-for="CountryCode" class="form-control">
+                        <option selected disabled value="0">@localizer["Country"]</option>
+                        <option value="AF">@localizer["AF"]</option>
+                        <option value="AL">@localizer["AL"]</option>
+                        <option value="DZ">@localizer["DZ"]</option>
+                        <option value="AS">@localizer["AS"]</option>
+                        <option value="AD">@localizer["AD"]</option>
+                        <option value="AO">@localizer["AO"]</option>
+                        <option value="AQ">@localizer["AQ"]</option>
+                        <option value="AG">@localizer["AG"]</option>
+                        <option value="AR">@localizer["AR"]</option>
+                        <option value="AM">@localizer["AM"]</option>
+                        <option value="AW">@localizer["AW"]</option>
+                        <option value="AU">@localizer["AU"]</option>
+                        <option value="AT">@localizer["AT"]</option>
+                        <option value="AZ">@localizer["AZ"]</option>
+                        <option value="BH">@localizer["BH"]</option>
+                        <option value="BD">@localizer["BD"]</option>
+                        <option value="BB">@localizer["BB"]</option>
+                        <option value="BY">@localizer["BY"]</option>
+                        <option value="BE">@localizer["BE"]</option>
+                        <option value="BZ">@localizer["BZ"]</option>
+                        <option value="BJ">@localizer["BJ"]</option>
+                        <option value="BM">@localizer["BM"]</option>
+                        <option value="BT">@localizer["BT"]</option>
+                        <option value="BO">@localizer["BO"]</option>
+                        <option value="BA">@localizer["BA"]</option>
+                        <option value="BW">@localizer["BW"]</option>
+                        <option value="BR">@localizer["BR"]</option>
+                        <option value="BN">@localizer["BN"]</option>
+                        <option value="BG">@localizer["BG"]</option>
+                        <option value="BF">@localizer["BF"]</option>
+                        <option value="BI">@localizer["BI"]</option>
+                        <option value="KH">@localizer["KH"]</option>
+                        <option value="CM">@localizer["CM"]</option>
+                        <option value="CA">@localizer["CA"]</option>
+                        <option value="CV">@localizer["CV"]</option>
+                        <option value="CF">@localizer["CF"]</option>
+                        <option value="TD">@localizer["TD"]</option>
+                        <option value="CL">@localizer["CL"]</option>
+                        <option value="CN">@localizer["CN"]</option>
+                        <option value="CO">@localizer["CO"]</option>
+                        <option value="CG">@localizer["CG"]</option>
+                        <option value="CD">@localizer["CD"]</option>
+                        <option value="CR">@localizer["CR"]</option>
+                        <option value="CI">@localizer["CI"]</option>
+                        <option value="HR">@localizer["HR"]</option>
+                        <option value="CU">@localizer["CU"]</option>
+                        <option value="CY">@localizer["CY"]</option>
+                        <option value="CZ">@localizer["CZ"]</option>
+                        <option value="DK">@localizer["DK"]</option>
+                        <option value="DJ">@localizer["DJ"]</option>
+                        <option value="DO">@localizer["DO"]</option>
+                        <option value="EC">@localizer["EC"]</option>
+                        <option value="EG">@localizer["EG"]</option>
+                        <option value="SV">@localizer["SV"]</option>
+                        <option value="ER">@localizer["ER"]</option>
+                        <option value="EE">@localizer["EE"]</option>
+                        <option value="ET">@localizer["ET"]</option>
+                        <option value="FK">@localizer["FK"]</option>
+                        <option value="FO">@localizer["FO"]</option>
+                        <option value="FJ">@localizer["FJ"]</option>
+                        <option value="FI">@localizer["FI"]</option>
+                        <option value="FR">@localizer["FR"]</option>
+                        <option value="GA">@localizer["GA"]</option>
+                        <option value="GM">@localizer["GM"]</option>
+                        <option value="GE">@localizer["GE"]</option>
+                        <option value="DE">@localizer["DE"]</option>
+                        <option value="GH">@localizer["GH"]</option>
+                        <option value="GI">@localizer["GI"]</option>
+                        <option value="GR">@localizer["GR"]</option>
+                        <option value="GL">@localizer["GL"]</option>
+                        <option value="GP">@localizer["GP"]</option>
+                        <option value="GT">@localizer["GT"]</option>
+                        <option value="GN">@localizer["GN"]</option>
+                        <option value="GW">@localizer["GW"]</option>
+                        <option value="GY">@localizer["GY"]</option>
+                        <option value="HT">@localizer["HT"]</option>
+                        <option value="VA">@localizer["VA"]</option>
+                        <option value="HN">@localizer["HN"]</option>
+                        <option value="HU">@localizer["HU"]</option>
+                        <option value="IS">@localizer["IS"]</option>
+                        <option value="IN">@localizer["IN"]</option>
+                        <option value="ID">@localizer["ID"]</option>
+                        <option value="IR">@localizer["IR"]</option>
+                        <option value="IQ">@localizer["IR"]</option>
+                        <option value="IE">@localizer["IE"]</option>
+                        <option value="IL">@localizer["IL"]</option>
+                        <option value="IT">@localizer["IT"]</option>
+                        <option value="JM">@localizer["JM"]</option>
+                        <option value="JP">@localizer["JP"]</option>
+                        <option value="JO">@localizer["JO"]</option>
+                        <option value="KZ">@localizer["KZ"]</option>
+                        <option value="KE">@localizer["KE"]</option>
+                        <option value="KI">@localizer["KI"]</option>
+                        <option value="KP">@localizer["KP"]</option>
+                        <option value="KR">@localizer["KR"]</option>
+                        <option value="KW">@localizer["KW"]</option>
+                        <option value="KG">@localizer["KG"]</option>
+                        <option value="LV">@localizer["LV"]</option>
+                        <option value="LB">@localizer["LB"]</option>
+                        <option value="LS">@localizer["LS"]</option>
+                        <option value="LR">@localizer["LR"]</option>
+                        <option value="LY">@localizer["LY"]</option>
+                        <option value="LI">@localizer["LI"]</option>
+                        <option value="LT">@localizer["LT"]</option>
+                        <option value="LU">@localizer["LU"]</option>
+                        <option value="MO">@localizer["MO"]</option>
+                        <option value="MK">@localizer["MK"]</option>
+                        <option value="MG">@localizer["MG"]</option>
+                        <option value="MW">@localizer["MW"]</option>
+                        <option value="MY">@localizer["MY"]</option>
+                        <option value="MV">@localizer["MV"]</option>
+                        <option value="ML">@localizer["ML"]</option>
+                        <option value="MT">@localizer["MT"]</option>
+                        <option value="MQ">@localizer["MQ"]</option>
+                        <option value="MR">@localizer["MR"]</option>
+                        <option value="MU">@localizer["MY"]</option>
+                        <option value="MX">@localizer["MX"]</option>
+                        <option value="MD">@localizer["MD"]</option>
+                        <option value="MC">@localizer["MC"]</option>
+                        <option value="MN">@localizer["MN"]</option>
+                        <option value="ME">@localizer["ME"]</option>
+                        <option value="MA">@localizer["MA"]</option>
+                        <option value="MZ">@localizer["MZ"]</option>
+                        <option value="MM">@localizer["MM"]</option>
+                        <option value="NA">@localizer["NA"]</option>
+                        <option value="NR">@localizer["NR"]</option>
+                        <option value="NP">@localizer["NP"]</option>
+                        <option value="NL">@localizer["NL"]</option>
+                        <option value="NZ">@localizer["NZ"]</option>
+                        <option value="NI">@localizer["NI"]</option>
+                        <option value="NE">@localizer["NE"]</option>
+                        <option value="NG">@localizer["NG"]</option>
+                        <option value="NO">@localizer["NO"]</option>
+                        <option value="OM">@localizer["OM"]</option>
+                        <option value="PK">@localizer["PK"]</option>
+                        <option value="PW">@localizer["PW"]</option>
+                        <option value="PA">@localizer["PA"]</option>
+                        <option value="PG">@localizer["PG"]</option>
+                        <option value="PY">@localizer["PY"]</option>
+                        <option value="PE">@localizer["PE"]</option>
+                        <option value="PH">@localizer["PH"]</option>
+                        <option value="PL">@localizer["PL"]</option>
+                        <option value="PT">@localizer["PT"]</option>
+                        <option value="PR">@localizer["PR"]</option>
+                        <option value="QA">@localizer["QA"]</option>
+                        <option value="RO">@localizer["RO"]</option>
+                        <option value="RU">@localizer["RU"]</option>
+                        <option value="RW">@localizer["RW"]</option>
+                        <option value="SH">@localizer["SH"]</option>
+                        <option value="KN">@localizer["KN"]</option>
+                        <option value="LC">@localizer["LC"]</option>
+                        <option value="MF">@localizer["MF"]</option>
+                        <option value="VC">@localizer["VC"]</option>
+                        <option value="WS">@localizer["WS"]</option>
+                        <option value="SM">@localizer["SM"]</option>
+                        <option value="ST">@localizer["ST"]</option>
+                        <option value="SA">@localizer["SA"]</option>
+                        <option value="SN">@localizer["SN"]</option>
+                        <option value="RS">@localizer["RS"]</option>
+                        <option value="SC">@localizer["SC"]</option>
+                        <option value="SL">@localizer["SL"]</option>
+                        <option value="SG">@localizer["SG"]</option>
+                        <option value="SK">@localizer["SK"]</option>
+                        <option value="SI">@localizer["SI"]</option>
+                        <option value="SB">@localizer["SB"]</option>
+                        <option value="SO">@localizer["SO"]</option>
+                        <option value="ZA">@localizer["ZA"]</option>
+                        <option value="SS">@localizer["SS"]</option>
+                        <option value="ES">@localizer["ES"]</option>
+                        <option value="LK">@localizer["LK"]</option>
+                        <option value="SD">@localizer["SD"]</option>
+                        <option value="SR">@localizer["SR"]</option>
+                        <option value="SZ">@localizer["SZ"]</option>
+                        <option value="SE">@localizer["SE"]</option>
+                        <option value="CH">@localizer["CH"]</option>
+                        <option value="SY">@localizer["SY"]</option>
+                        <option value="TW">@localizer["TW"]</option>
+                        <option value="TJ">@localizer["TJ"]</option>
+                        <option value="TZ">@localizer["TZ"]</option>
+                        <option value="TH">@localizer["TH"]</option>
+                        <option value="TL">@localizer["TL"]</option>
+                        <option value="TG">@localizer["TG"]</option>
+                        <option value="TK">@localizer["TK"]</option>
+                        <option value="TO">@localizer["TO"]</option>
+                        <option value="TT">@localizer["TT"]</option>
+                        <option value="TN">@localizer["TN"]</option>
+                        <option value="TR">@localizer["TR"]</option>
+                        <option value="TM">@localizer["TM"]</option>
+                        <option value="TV">@localizer["TV"]</option>
+                        <option value="UG">@localizer["UG"]</option>
+                        <option value="UA">@localizer["UA"]</option>
+                        <option value="AE">@localizer["AE"]</option>
+                        <option value="GB">@localizer["GB"]</option>
+                        <option value="US">@localizer["US"]</option>
+                        <option value="UY">@localizer["UY"]</option>
+                        <option value="UZ">@localizer["UZ"]</option>
+                        <option value="VU">@localizer["VU"]</option>
+                        <option value="VE">@localizer["VE"]</option>
+                        <option value="VN">@localizer["VN"]</option>
+                        <option value="VG">@localizer["VG"]</option>
+                        <option value="VI">@localizer["VI"]</option>
+                        <option value="EH">@localizer["EH"]</option>
+                        <option value="YE">@localizer["YE"]</option>
+                        <option value="ZM">@localizer["ZM"]</option>
+                        <option value="ZW">@localizer["ZW"]</option>
+                </select>
+                <span asp-validation-for="CountryCode" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 mt-2">
+                <label class="form-label mt-4">@localizer["Phone"]</label><span style="color:red">*</span>
+                <input asp-for="Phone" class="form-control" placeholder=@localizer["Phone"]>
+                 <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 my-2">
+                <label class="form-label mt-4">@localizer["HomePhone"]</label>
+                <input asp-for="HomePhone" class="form-control" placeholder=@localizer["HomePhone"]>
+                <span asp-validation-for="HomePhone" class="text-danger"></span>
+            </div>
+        </div>
+
+
+
+
+        <div class="row mt-4 mx-5 forma">
+            <legend class="text-primary">@localizer["BusinessInformation"]</legend>
+                <div class="form-group col-lg-6 mt-2">
+                <label class="form-label mt-4">@localizer["WorkingPreferences"]</label><span style="color:red">*</span>
+                     <select asp-for="WorkingPreferences" class="form-control">
+                        <option value="" disabled selected></option>
+                        <option value="Office">@localizer["Office"]</option>
+                        <option value="Home">@localizer["Home"]</option>
+                        <option value="Hybrid">@localizer["Hybrid"]</option>
+                     </select> 
+                      <span asp-validation-for="WorkingPreferences" class="text-danger"></span>
+                 </div>
+             
+              
+                <div class="form-group col-lg-6 mt-2 text-center">
+                <label class="form-label mt-4">@localizer["Position"]</label><span style="color:red">*</span>
+                <div class="form-check form-check-inline">
+                    <input asp-for="Position" class="form-check-input" type="radio" name="Position" id="optionsRadiosCompanyWebsite"  value="Company Website">
+                    <label class="form-check-label" for="optionsRadiosCompanyWebsite">
+                         @localizer["CompanyWebsite"]
+                    </label>
+                </div>
+                  <div class="form-check form-check-inline">
+                    <input asp-for="Position" class="form-check-input" type="radio" name="Position" id="optionsRadiosLinkedin" value="Linkedin">
+                    <label class="form-check-label" for="optionsRadiosLinkedin">
+                         @localizer["Linkedin"]
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input asp-for="Position" class="form-check-input" type="radio" name="Position" id="optionsRadiosUniversityEvent" value="University Event">
+                    <label class="form-check-label" for="optionsRadiosUniversityEvent">
+                         @localizer["UniversityEvent"]
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input asp-for="Position" class="form-check-input" type="radio" name="Position" id="optionsRadiosOther" value="Other">
+                    <label class="form-check-label" for="optionsRadiosOther">
+                         @localizer["Other"]
+                    </label>
+                  </div>
+                  <br/>
+               <span asp-validation-for="Position" class="text-danger"></span>
+               </div>
+
+            <div class="form-group col-lg-12 mt-2">
+                <label class="form-label mt-4">@localizer["CoverLetter"]</label>
+                <textarea asp-for="CoverLetter" class="form-control" rows="4"></textarea>
+            </div>
+
+            <div class="form-group col-lg-12 my-2">
+                <label asp-for="FileUpload" class="form-label mt-4"></label><span style="color:red">*</span>
+                <input asp-for="FileUpload" class="form-control" type="file" name="postedFile">
+              <small class="form-text text-muted">@localizer["CVInfo"]</small>
+            </div>
+            <span asp-validation-for="FileUpload" class="text-danger"></span>
+        </div>
+
+            
+        <div class="text-center mt-5">
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+</form>
+</div>

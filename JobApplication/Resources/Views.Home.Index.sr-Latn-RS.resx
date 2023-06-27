@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutCompany" xml:space="preserve">
+    <value>Mi smo kompanija za razvoj softvera sa sjedištem u gradu Sarajevu, Bosna i Hercegovina.
+                    Specijalizovani smo za razvoj web aplikacija baziranih na oblaku i izvornih aplikacija za klijente na evropskom tržištu.
+                    Naš tim je mlad, talentovan i strastven u korištenju tehnologije za rješavanje problema i stvaranje vrijednosti za naše klijente.
+                    Radimo u modernom i dinamičnom okruženju, koristeći najnovije alate i metodologije za isporuku visokokvalitetnih softverskih rješenja.
+                    Bilo da ste mala tvrtka koja želi pojednostaviti svoje poslovanje ili velika korporacija koja želi lansirati novi proizvod,
+                    imamo vještine i iskustvo da vam pomognemo da uspijete. Kontaktirajte nas danas da saznate više o tome kako možemo pomoći vašem poslovanju da napreduje u digitalnom dobu.</value>
+  </data>
+  <data name="AD" xml:space="preserve">
+    <value>Andora</value>
+  </data>
+  <data name="AdditionalInformation" xml:space="preserve">
+    <value>Dodatne informacije</value>
+  </data>
+  <data name="AdditionalInformationText" xml:space="preserve">
+    <value>Priliku da budete dio stručne i visoko motivisane grupe ljudi.
+                Opuštenu, zabavnu atmosfera i moderno radno okruženje.
+                Obrazovnu podrška - konferencije, kursevi, obuke.
+                Team building i druge organizovane aktivnosti.
+                Radnu oprema.
+                Fleksibilno radno vrijeme.
+                Rad na daljinu.
+                Povremene posjete našim međunarodnim klijentima.
+                U skladu sa politikom upravljanja učinkom i vašim rastom, dolazi do povećanja plata.</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="AE" xml:space="preserve">
+    <value>Ujedinjeni Arapski Emirati</value>
+  </data>
+  <data name="AF" xml:space="preserve">
+    <value>Afganistan</value>
+  </data>
+  <data name="AG" xml:space="preserve">
+    <value>Antigva i Barbuda</value>
+  </data>
+  <data name="AL" xml:space="preserve">
+    <value>Albanija</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>Armenia</value>
+  </data>
+  <data name="AO" xml:space="preserve">
+    <value>Angola</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Prijavi se za posao</value>
+  </data>
+  <data name="AQ" xml:space="preserve">
+    <value>Antartik</value>
+  </data>
+  <data name="AR" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="AS" xml:space="preserve">
+    <value>Američka Samoa</value>
+  </data>
+  <data name="AT" xml:space="preserve">
+    <value>Austria</value>
+  </data>
+  <data name="AU" xml:space="preserve">
+    <value>Australija</value>
+  </data>
+  <data name="AW" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="AZ" xml:space="preserve">
+    <value>Azerbejdžan</value>
+  </data>
+  <data name="BA" xml:space="preserve">
+    <value>Bosna i Hercegovina</value>
+  </data>
+  <data name="BB" xml:space="preserve">
+    <value>Barbados</value>
+  </data>
+  <data name="BD" xml:space="preserve">
+    <value>Bangladeš</value>
+  </data>
+  <data name="BE" xml:space="preserve">
+    <value>Belgija</value>
+  </data>
+  <data name="BF" xml:space="preserve">
+    <value>Burkina Faso</value>
+  </data>
+  <data name="BG" xml:space="preserve">
+    <value>Bugarska</value>
+  </data>
+  <data name="BH" xml:space="preserve">
+    <value>Bahrein</value>
+  </data>
+  <data name="BI" xml:space="preserve">
+    <value>Burundi</value>
+  </data>
+  <data name="BJ" xml:space="preserve">
+    <value>Benin</value>
+  </data>
+  <data name="BM" xml:space="preserve">
+    <value>Bermuda</value>
+  </data>
+  <data name="BN" xml:space="preserve">
+    <value>Brunei</value>
+  </data>
+  <data name="BO" xml:space="preserve">
+    <value>Bolivija</value>
+  </data>
+  <data name="BR" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="BT" xml:space="preserve">
+    <value>Butan</value>
+  </data>
+  <data name="BusinessInformation" xml:space="preserve">
+    <value>Poslovne informacije</value>
+  </data>
+  <data name="BW" xml:space="preserve">
+    <value>Bocvana</value>
+  </data>
+  <data name="BY" xml:space="preserve">
+    <value>Bjelorusija</value>
+  </data>
+  <data name="BZ" xml:space="preserve">
+    <value>Belize</value>
+  </data>
+  <data name="CA" xml:space="preserve">
+    <value>Kanada</value>
+  </data>
+  <data name="CD" xml:space="preserve">
+    <value>D.R. Kongo</value>
+  </data>
+  <data name="CF" xml:space="preserve">
+    <value>Centralnoafrička Republika</value>
+  </data>
+  <data name="CG" xml:space="preserve">
+    <value>Kongo</value>
+  </data>
+  <data name="CH" xml:space="preserve">
+    <value>Švicarska</value>
+  </data>
+  <data name="CI" xml:space="preserve">
+    <value>Obala Slonovače</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Grad</value>
+  </data>
+  <data name="CL" xml:space="preserve">
+    <value>Čile</value>
+  </data>
+  <data name="CM" xml:space="preserve">
+    <value>Kamerun</value>
+  </data>
+  <data name="CN" xml:space="preserve">
+    <value>Kina</value>
+  </data>
+  <data name="CO" xml:space="preserve">
+    <value>Kolumbija</value>
+  </data>
+  <data name="CompanyWebsite" xml:space="preserve">
+    <value>Web stranica kompanije</value>
+  </data>
+  <data name="ConfirmEmail" xml:space="preserve">
+    <value>Potvrda Emaila</value>
+  </data>
+  <data name="ContactDetails" xml:space="preserve">
+    <value>Kontaktni detalji</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Država</value>
+  </data>
+  <data name="CoverLetter" xml:space="preserve">
+    <value>Motivaciono Pismo</value>
+  </data>
+  <data name="CR" xml:space="preserve">
+    <value>Kostarika</value>
+  </data>
+  <data name="CU" xml:space="preserve">
+    <value>Kuba</value>
+  </data>
+  <data name="CV" xml:space="preserve">
+    <value>Zelenortska Ostrva</value>
+  </data>
+  <data name="CVInfo" xml:space="preserve">
+    <value>Max. veličina datoteke: 5 MB | Podržani formati: .pdf, .docx, .doc, .txt</value>
+  </data>
+  <data name="CY" xml:space="preserve">
+    <value>Kipar</value>
+  </data>
+  <data name="CZ" xml:space="preserve">
+    <value>Češka</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Datum Rođenja</value>
+  </data>
+  <data name="DE" xml:space="preserve">
+    <value>Njemačka</value>
+  </data>
+  <data name="DJ" xml:space="preserve">
+    <value>Džibuti</value>
+  </data>
+  <data name="DK" xml:space="preserve">
+    <value>Danska</value>
+  </data>
+  <data name="DO" xml:space="preserve">
+    <value>Dominikanska Republika</value>
+  </data>
+  <data name="DZ" xml:space="preserve">
+    <value>Alžir</value>
+  </data>
+  <data name="EC" xml:space="preserve">
+    <value>Ekvador</value>
+  </data>
+  <data name="EE" xml:space="preserve">
+    <value>Estonija</value>
+  </data>
+  <data name="EG" xml:space="preserve">
+    <value>Egipt</value>
+  </data>
+  <data name="EH" xml:space="preserve">
+    <value>Zapadna Sahara</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email Adresa</value>
+  </data>
+  <data name="en" xml:space="preserve">
+    <value>Engleski</value>
+  </data>
+  <data name="ER" xml:space="preserve">
+    <value>Eritreja</value>
+  </data>
+  <data name="ES" xml:space="preserve">
+    <value>Španija</value>
+  </data>
+  <data name="ET" xml:space="preserve">
+    <value>Etiopija</value>
+  </data>
+  <data name="FI" xml:space="preserve">
+    <value>Finska</value>
+  </data>
+  <data name="FileUpload" xml:space="preserve">
+    <value>CV</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="FJ" xml:space="preserve">
+    <value>Fidži</value>
+  </data>
+  <data name="FK" xml:space="preserve">
+    <value>Foklandska Ostrva</value>
+  </data>
+  <data name="FO" xml:space="preserve">
+    <value>Farska Ostrva</value>
+  </data>
+  <data name="FR" xml:space="preserve">
+    <value>Francuska</value>
+  </data>
+  <data name="GA" xml:space="preserve">
+    <value>Gabon</value>
+  </data>
+  <data name="GB" xml:space="preserve">
+    <value>Velika Britanija</value>
+  </data>
+  <data name="GE" xml:space="preserve">
+    <value>Gruzija</value>
+  </data>
+  <data name="GH" xml:space="preserve">
+    <value>Gana</value>
+  </data>
+  <data name="GI" xml:space="preserve">
+    <value>Gibraltar</value>
+  </data>
+  <data name="GL" xml:space="preserve">
+    <value>Grenland</value>
+  </data>
+  <data name="GM" xml:space="preserve">
+    <value>Gambija</value>
+  </data>
+  <data name="GN" xml:space="preserve">
+    <value>Gvineja</value>
+  </data>
+  <data name="GP" xml:space="preserve">
+    <value>Gvadalope</value>
+  </data>
+  <data name="GR" xml:space="preserve">
+    <value>Grčka</value>
+  </data>
+  <data name="GT" xml:space="preserve">
+    <value>Gvatemala</value>
+  </data>
+  <data name="GW" xml:space="preserve">
+    <value>Gvineja-Bisao</value>
+  </data>
+  <data name="GY" xml:space="preserve">
+    <value>Gvajana</value>
+  </data>
+  <data name="HN" xml:space="preserve">
+    <value>Honduras</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Rad od kuće</value>
+  </data>
+  <data name="HomePhone" xml:space="preserve">
+    <value>Kućni Telefon</value>
+  </data>
+  <data name="HR" xml:space="preserve">
+    <value>Hrvatska</value>
+  </data>
+  <data name="HT" xml:space="preserve">
+    <value>Haiti</value>
+  </data>
+  <data name="HU" xml:space="preserve">
+    <value>Mađarska</value>
+  </data>
+  <data name="Hybrid" xml:space="preserve">
+    <value>Hibridni način rada</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Indonezija</value>
+  </data>
+  <data name="IE" xml:space="preserve">
+    <value>Irska</value>
+  </data>
+  <data name="IL" xml:space="preserve">
+    <value>Izrael</value>
+  </data>
+  <data name="IN" xml:space="preserve">
+    <value>Indija</value>
+  </data>
+  <data name="InvalidAge" xml:space="preserve">
+    <value>Nevalidne godine</value>
+  </data>
+  <data name="IQ" xml:space="preserve">
+    <value>Irak</value>
+  </data>
+  <data name="IR" xml:space="preserve">
+    <value>Iran</value>
+  </data>
+  <data name="IS" xml:space="preserve">
+    <value>Island</value>
+  </data>
+  <data name="IT" xml:space="preserve">
+    <value>Italija</value>
+  </data>
+  <data name="JM" xml:space="preserve">
+    <value>Jamajka</value>
+  </data>
+  <data name="JO" xml:space="preserve">
+    <value>Jordan</value>
+  </data>
+  <data name="JobDescription" xml:space="preserve">
+    <value>Opis posla</value>
+  </data>
+  <data name="JP" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="KE" xml:space="preserve">
+    <value>Kenija</value>
+  </data>
+  <data name="KG" xml:space="preserve">
+    <value>Kirgistan</value>
+  </data>
+  <data name="KH" xml:space="preserve">
+    <value>Kambodža</value>
+  </data>
+  <data name="KI" xml:space="preserve">
+    <value>Kiribati</value>
+  </data>
+  <data name="KN" xml:space="preserve">
+    <value>Sveti Kits i Nevis</value>
+  </data>
+  <data name="KP" xml:space="preserve">
+    <value>Južna Koreja</value>
+  </data>
+  <data name="KR" xml:space="preserve">
+    <value>Sjeverna Koreja</value>
+  </data>
+  <data name="KW" xml:space="preserve">
+    <value>Kuvajt</value>
+  </data>
+  <data name="KZ" xml:space="preserve">
+    <value>Kazahstan</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="LB" xml:space="preserve">
+    <value>Liban</value>
+  </data>
+  <data name="LC" xml:space="preserve">
+    <value>Sveta Lucija</value>
+  </data>
+  <data name="LI" xml:space="preserve">
+    <value>Lihtenštajn</value>
+  </data>
+  <data name="Linkedin" xml:space="preserve">
+    <value>Linkedin</value>
+  </data>
+  <data name="LK" xml:space="preserve">
+    <value>Šri Lanka</value>
+  </data>
+  <data name="LR" xml:space="preserve">
+    <value>Liberija</value>
+  </data>
+  <data name="LS" xml:space="preserve">
+    <value>Lesoto</value>
+  </data>
+  <data name="LT" xml:space="preserve">
+    <value>Litvanija</value>
+  </data>
+  <data name="LU" xml:space="preserve">
+    <value>Luksemburg</value>
+  </data>
+  <data name="LV" xml:space="preserve">
+    <value>Latvija</value>
+  </data>
+  <data name="LY" xml:space="preserve">
+    <value>Libija</value>
+  </data>
+  <data name="MA" xml:space="preserve">
+    <value>Maroko</value>
+  </data>
+  <data name="MC" xml:space="preserve">
+    <value>Monako</value>
+  </data>
+  <data name="MD" xml:space="preserve">
+    <value>Moldavija</value>
+  </data>
+  <data name="ME" xml:space="preserve">
+    <value>Crna Gora</value>
+  </data>
+  <data name="MF" xml:space="preserve">
+    <value>Sveti Martin</value>
+  </data>
+  <data name="MG" xml:space="preserve">
+    <value>Madagaskar</value>
+  </data>
+  <data name="MK" xml:space="preserve">
+    <value>Makedonija</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="MM" xml:space="preserve">
+    <value>Mjanmar</value>
+  </data>
+  <data name="MN" xml:space="preserve">
+    <value>Mongolija</value>
+  </data>
+  <data name="MO" xml:space="preserve">
+    <value>Makao</value>
+  </data>
+  <data name="MQ" xml:space="preserve">
+    <value>Martinik</value>
+  </data>
+  <data name="MR" xml:space="preserve">
+    <value>Mauritanija</value>
+  </data>
+  <data name="MT" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="MU" xml:space="preserve">
+    <value>Mauricijus</value>
+  </data>
+  <data name="MV" xml:space="preserve">
+    <value>Maldivi</value>
+  </data>
+  <data name="MW" xml:space="preserve">
+    <value>Malavi</value>
+  </data>
+  <data name="MX" xml:space="preserve">
+    <value>Meksiko</value>
+  </data>
+  <data name="MY" xml:space="preserve">
+    <value>Malezija</value>
+  </data>
+  <data name="MZ" xml:space="preserve">
+    <value>Mozambik</value>
+  </data>
+  <data name="NA" xml:space="preserve">
+    <value>Namibija</value>
+  </data>
+  <data name="NE" xml:space="preserve">
+    <value>Niger</value>
+  </data>
+  <data name="NG" xml:space="preserve">
+    <value>Nigerija</value>
+  </data>
+  <data name="NI" xml:space="preserve">
+    <value>Nikaragva</value>
+  </data>
+  <data name="NL" xml:space="preserve">
+    <value>Holandija</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>Norveška</value>
+  </data>
+  <data name="NP" xml:space="preserve">
+    <value>Nepal</value>
+  </data>
+  <data name="NR" xml:space="preserve">
+    <value>Nauru</value>
+  </data>
+  <data name="NZ" xml:space="preserve">
+    <value>Novi Zeland</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Rad iz kancelarije</value>
+  </data>
+  <data name="OM" xml:space="preserve">
+    <value>Oman</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Ostalo</value>
+  </data>
+  <data name="PA" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="PE" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="PersonalDetails" xml:space="preserve">
+    <value>Lični podaci</value>
+  </data>
+  <data name="PG" xml:space="preserve">
+    <value>Papua Nova Gvineja</value>
+  </data>
+  <data name="PH" xml:space="preserve">
+    <value>Filipini</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="PK" xml:space="preserve">
+    <value>Pakistan</value>
+  </data>
+  <data name="PL" xml:space="preserve">
+    <value>Poljska</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Kako ste saznali za ovu poziciju?</value>
+  </data>
+  <data name="PR" xml:space="preserve">
+    <value>Portoriko</value>
+  </data>
+  <data name="PT" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="PW" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="PY" xml:space="preserve">
+    <value>Paragvaj</value>
+  </data>
+  <data name="QA" xml:space="preserve">
+    <value>Katar</value>
+  </data>
+  <data name="Qualifications" xml:space="preserve">
+    <value>Kvalifikacije</value>
+  </data>
+  <data name="QualificationsText" xml:space="preserve">
+    <value>Minimalno 2 godine iskustva u programskim jezicima .NET, C# i JavaScript.
+                Snažne vještine komunikacije i koordinacije.
+                Odlične kritičke, analitičke sposobnosti i sposobnosti rješavanja problema.
+                Orijentisanost ka timu i agilni način razmišljanja, te sposobnost samostalnog rada.
+                Odlične verbalne i pisane komunikacijske vještine na engleskom jeziku.
+                Diploma fakulteta računarstva ili drugih srodnih disciplina.</value>
+  </data>
+  <data name="RO" xml:space="preserve">
+    <value>Rumunija</value>
+  </data>
+  <data name="RS" xml:space="preserve">
+    <value>Srbija</value>
+  </data>
+  <data name="RU" xml:space="preserve">
+    <value>Rusija</value>
+  </data>
+  <data name="RW" xml:space="preserve">
+    <value>Ruanda</value>
+  </data>
+  <data name="SA" xml:space="preserve">
+    <value>Saudijska Arabija</value>
+  </data>
+  <data name="SB" xml:space="preserve">
+    <value>Solomonska Ostrva</value>
+  </data>
+  <data name="SC" xml:space="preserve">
+    <value>Sejšeli</value>
+  </data>
+  <data name="SD" xml:space="preserve">
+    <value>Sudan</value>
+  </data>
+  <data name="SE" xml:space="preserve">
+    <value>Švedska</value>
+  </data>
+  <data name="SG" xml:space="preserve">
+    <value>Singapur</value>
+  </data>
+  <data name="SH" xml:space="preserve">
+    <value>Sveta Helena</value>
+  </data>
+  <data name="SI" xml:space="preserve">
+    <value>Slovenija</value>
+  </data>
+  <data name="SK" xml:space="preserve">
+    <value>Slovačka</value>
+  </data>
+  <data name="SL" xml:space="preserve">
+    <value>Sijera Leone</value>
+  </data>
+  <data name="SM" xml:space="preserve">
+    <value>San Marino</value>
+  </data>
+  <data name="SN" xml:space="preserve">
+    <value>Senegal</value>
+  </data>
+  <data name="SO" xml:space="preserve">
+    <value>Somalija</value>
+  </data>
+  <data name="SR" xml:space="preserve">
+    <value>Suirnam</value>
+  </data>
+  <data name="sr-Latn-RS" xml:space="preserve">
+    <value>Srpski</value>
+  </data>
+  <data name="SS" xml:space="preserve">
+    <value>Južni Sudan</value>
+  </data>
+  <data name="ST" xml:space="preserve">
+    <value>Sao Tome i Prinsipe</value>
+  </data>
+  <data name="SV" xml:space="preserve">
+    <value>Salvador</value>
+  </data>
+  <data name="SY" xml:space="preserve">
+    <value>Sirija</value>
+  </data>
+  <data name="SZ" xml:space="preserve">
+    <value>Svaziland</value>
+  </data>
+  <data name="TD" xml:space="preserve">
+    <value>Čad</value>
+  </data>
+  <data name="TG" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="TH" xml:space="preserve">
+    <value>Tajland</value>
+  </data>
+  <data name="TJ" xml:space="preserve">
+    <value>Tadžikistan</value>
+  </data>
+  <data name="TK" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="TL" xml:space="preserve">
+    <value>Istočni Timor</value>
+  </data>
+  <data name="TM" xml:space="preserve">
+    <value>Turkmenistan</value>
+  </data>
+  <data name="TN" xml:space="preserve">
+    <value>Tunis</value>
+  </data>
+  <data name="TO" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="TR" xml:space="preserve">
+    <value>Turska</value>
+  </data>
+  <data name="TT" xml:space="preserve">
+    <value>Trinidad Tobago</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="TW" xml:space="preserve">
+    <value>Tajvan</value>
+  </data>
+  <data name="TZ" xml:space="preserve">
+    <value>Tanzanija</value>
+  </data>
+  <data name="UA" xml:space="preserve">
+    <value>Ukrajina</value>
+  </data>
+  <data name="UG" xml:space="preserve">
+    <value>Uganda</value>
+  </data>
+  <data name="UniversityEvent" xml:space="preserve">
+    <value>Univerzitetski događaj</value>
+  </data>
+  <data name="US" xml:space="preserve">
+    <value>Sjedinjene Američke Države</value>
+  </data>
+  <data name="UY" xml:space="preserve">
+    <value>Urugvaj</value>
+  </data>
+  <data name="UZ" xml:space="preserve">
+    <value>Uzbekistan</value>
+  </data>
+  <data name="VA" xml:space="preserve">
+    <value>Vatikan</value>
+  </data>
+  <data name="VC" xml:space="preserve">
+    <value>Sveti Vinsent i Grenadini</value>
+  </data>
+  <data name="VE" xml:space="preserve">
+    <value>Venecuela</value>
+  </data>
+  <data name="VG" xml:space="preserve">
+    <value>Britanska Djevičanska Ostrva</value>
+  </data>
+  <data name="VI" xml:space="preserve">
+    <value>Američka Djevičanska Ostrva</value>
+  </data>
+  <data name="VN" xml:space="preserve">
+    <value>Vijetnam</value>
+  </data>
+  <data name="VU" xml:space="preserve">
+    <value>Vanuatu</value>
+  </data>
+  <data name="WeOffer" xml:space="preserve">
+    <value>Šta mi nudimo</value>
+  </data>
+  <data name="WhatDoYouBring" xml:space="preserve">
+    <value>Šta Vi donosite timu</value>
+  </data>
+  <data name="WorkingPreferences" xml:space="preserve">
+    <value>Radne preference</value>
+  </data>
+  <data name="WS" xml:space="preserve">
+    <value>Samoa</value>
+  </data>
+  <data name="YE" xml:space="preserve">
+    <value>Jemen</value>
+  </data>
+  <data name="YourFieldOfWork" xml:space="preserve">
+    <value>Vaše polje rada</value>
+  </data>
+  <data name="YourFieldOfWorkText" xml:space="preserve">
+    <value>U ovoj uzbudljivoj ulozi, razvijaćete REST servise.
+                Blisko ćete sarađivati sa našim Frontend developerima i podržavati ih sa API potrebama.
+                Održavaćete bazu podataka i strukturu baze podataka (MS SQL), kao i sve proizvode u njoj.
+                Pisaćete i implementirati nove API endpointe i poboljšavati postojeće.
+                Na kraju, pokrivaćete aplikacije jediničnim testovima i biti odgovorni za visok kvalitet razvijenih aplikacija.</value>
+  </data>
+  <data name="ZA" xml:space="preserve">
+    <value>Južna Afrika</value>
+  </data>
+  <data name="ZM" xml:space="preserve">
+    <value>Zambija</value>
+  </data>
+  <data name="ZW" xml:space="preserve">
+    <value>Zimbambve</value>
+  </data>
+</root>
